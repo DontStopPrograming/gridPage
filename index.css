@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #1a1c1b;
+}
+
+section{
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.back {
+    font: rgb(225, 13, 225);
+    font-size: larger;
+}
+
+#menu {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: 
+        "about about project project"
+        "about about project project"
+        "about about post contact"
+        "about about post contact"
+}
+
+#menu .about-tile .front {
+    background-image: url(img/about.jpg);
+}
+
+#menu .project-tile .front {
+    background-image: url(img/project.jpg);
+}
+
+#menu .post-tile .front {
+    background-image: url(img/post.jpg);
+}
+
+#menu .contact-tile .front {
+    background-image: url(img/contac.jpg);
+}
+
+#menu .tile {
+    height: 100%;
+    overflow: hidden;
+
+}
+
+#menu .tile a {
+    text-decoration: none;
+}
+
+#menu .tile .front {
+    background-color: black;
+    color: white;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center center;
+    object-fit: cover;
+    transition: all 0.3 ease;
+}
+
+#menu .tile .back {
+    background-color: #222;
+    color: white;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+#menu .tile:hover .front {
+    margin-top: -105%;
+}
+
+#menu .project-tile:hover .front {
+    margin-top: -52%;
+}
+
+.about-tile {
+    grid-area: about;
+}
+
+.project-tile {
+    grid-area: project;
+}
+
+.post-tile {
+    grid-area: post;
+}
+
+.contact-tile {
+    grid-area: contact;
+}
