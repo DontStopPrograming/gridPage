@@ -24,7 +24,8 @@ section{
     "about about project project"
     "about about project project"
     "about about post contact"
-    "about about post contact"
+    "about about post contact";
+    
 }
 
 #menu .tile {
@@ -50,6 +51,7 @@ section{
     background-position: center center;
     object-fit: cover;
     transition: all 0.5s ease;
+    
 }
 
 #menu .tile .back {
@@ -61,11 +63,16 @@ section{
     height: 100%;
     font-weight: bold;
     font-size: 28px;
+    
 }
-
 
 #menu .tile:hover .front {
     margin-top: -100%;
+}
+
+#menu .tile:hover .front {
+    margin-top: -100%;
+    
 }
 
 #menu .project-tile:hover .front {
@@ -104,50 +111,23 @@ section{
     grid-area: contact;
 }
 
-@media screen and (max-width: 400px) and (min-width: 300px){
+@media screen and (max-width: 400px) and (min-width: 50px){
     #menu {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        
         grid-template-areas: 
             "about"
             "project"
             "post"
-            "contact"
+            "contact";
             }
     
-            #menu .tile .front {
-                background-color: black;
-                color: white;
-                height: 100%;
-                display: grid;
-                justify-items: center;
-                align-items: center;
-                padding: 20px;
-                box-sizing: border-box;
-                background-size: cover;
-                background-position: center center;
-                object-fit: cover;
-                transition: all 0.5s ease;
-            }
-            
-            #menu .tile .back:disabled {
-                background-color: #222;
-                color: white;
-                display: block;
-                justify-items: center;
-                align-items: center;
-                height: 100%;
-                font-weight: bold;
-                font-size: 28px;
-            }
-            
-            #menu .tile:hover .front {
+    #menu .tile:hover .front {
                 margin-top: 0px;
             }
             
-            #menu .project-tile:hover .front {
+    #menu .project-tile:hover .front {
                 margin-top: 0px;
             }        
 }
@@ -159,7 +139,7 @@ section{
         grid-template-rows: 1fr 1fr;
         grid-template-areas: 
             "about project"
-            "post contact"
+            "post contact";
     }
 
     #menu .tile:hover .front {
@@ -169,6 +149,79 @@ section{
     #menu .project-tile:hover .front {
         margin-top: 0px;
     }
+}
+
+@media screen and (max-width: 1090px) and (min-width: 801px){
+    
+    #menu {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        justify-content: center;
+        align-items: center;
+        grid-template-areas: 
+        "about about project project"
+        "about about project project"
+        "about about post contact"
+        "about about post contact";
+    }
+
+    #menu .project-tile:hover .front {
+        margin-top: -50%;
+}
+}
 
 
+#about {
+    display: grid;
+   
+    gap: 10px;
+    padding: 20px;
+}
+
+#about .tile {
+    border-radius: 10px;
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: #eee;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: justify;
+    width: 10px;
+    height: 10px;
+    
+}
+
+#about .tile img {
+    width: 100%;
+    height: 100%;
+}
+
+#about .tile-1 {
+    grid-column: 1 / 1;
+}    
+
+#about .tile-2 {
+    grid-column: 2 / 2;
+    
+}
+
+#about .tile-3 {
+    grid-column: 3 / 3;
+}
+
+#about .tile-4 {
+    grid-column: 4 / 4;
+}
+
+#about .tile-5 {
+    grid-column: 5 / 5;
+}
+
+#about .tile-6 {
+    grid-column: 1 / 6;
+    grid-row: 6 / 6;
 }
