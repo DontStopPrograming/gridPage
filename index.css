@@ -200,28 +200,45 @@ section{
     height: 100%;
 }
 
-#about .tile-1 {
+#about .a-1 {
     grid-column: 1 / 1;
 }    
 
-#about .tile-2 {
+#about .a-2 {
     grid-column: 2 / 2;
     
 }
 
-#about .tile-3 {
+#about .a-3 {
     grid-column: 3 / 3;
 }
 
-#about .tile-4 {
+#about .a-4 {
     grid-column: 4 / 4;
 }
 
-#about .tile-5 {
+#about .a-5 {
     grid-column: 5 / 5;
 }
 
-#about .tile-6 {
+#about .a-6 {
     grid-column: 1 / 6;
     grid-row: 6 / 6;
 }
+
+#project {
+    background-color: #222;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+}
+    .p-1 { 
+        grid-area: 1 / 1 / 4 / 3; 
+        background-image: url(img/mas.jpg);
+    }
+    
+    .p-2 { 
+        grid-area: 2 / 1 / 5 / 4; 
+        background-image: url(img/char.jpg);
+    }
