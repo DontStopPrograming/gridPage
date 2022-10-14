@@ -5,11 +5,29 @@
 
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100vh;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
 }
 
 section{
     min-height: 100vh;
     box-sizing: border-box;
+}
+
+
+
+.snap-seccion {
+    scroll-snap-align: start;
+    
+}
+
+.seccion:nth-child(1){
+    background-color: #eee;
+}
+
+.seccion:nth-child(2){
+    background-color: #eee;
 }
 
 #menu {
@@ -222,23 +240,25 @@ section{
 }
 
 #about .a-6 {
-    grid-column: 1 / 6;
-    grid-row: 6 / 6;
+    grid-column: 6 / 6;
 }
 
 #project {
     background-color: #222;
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
-    gap: 0px 0px; 
 }
-    .p-1 { 
-        grid-area: 1 / 1 / 4 / 3; 
-        background-image: url(img/mas.jpg);
-    }
-    
-    .p-2 { 
-        grid-area: 2 / 1 / 5 / 4; 
-        background-image: url(img/char.jpg);
-    }
+
+.p-1 {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    z-index: 1;
+    background-image: url(img/phy.jpg);
+}
+
+.p-2 {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    z-index: -1;
+    background-image: url(img/char.jpg);
+}
