@@ -17,18 +17,6 @@ section{
 
 
 
-.snap-seccion {
-    scroll-snap-align: start;
-    
-}
-
-.seccion:nth-child(1){
-    background-color: #eee;
-}
-
-.seccion:nth-child(2){
-    background-color: #eee;
-}
 
 #menu {
     margin: 0;
@@ -262,3 +250,49 @@ section{
     z-index: -1;
     background-image: url(img/char.jpg);
 }
+
+
+#contact {
+    background-color: rgba(50, 70, 152);
+    display: grid;
+    grid-template: auto 100px / 700px;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+#contact form {
+    padding: 20px;
+    color: white;
+    display: grid;
+    gap: 15px;
+    grid-template: auto /auto;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#contact form input,
+#contact form textarea {
+    padding: 20px 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+
+#contact .social-networks {
+   justify-self: center;
+   padding: 10px 0; 
+}
+
+#contact .social-networks a {
+    color: white;
+}
+
+#contact form input[type = "submit"]{
+    background-color: red;
+    font-weight: bold;
+    font-size: 28px;
+}
+
