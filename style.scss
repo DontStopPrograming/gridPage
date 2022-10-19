@@ -1,0 +1,347 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    scroll-snap-type: x mandatory;
+    
+}
+
+.slider {
+    
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+}
+
+section{
+    max-width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+}
+
+#menu {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: 
+    "about about project project"
+    "about about project project"
+    "about about post contact"
+    "about about post contact";
+    
+}
+
+#menu .tile {
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#menu .tile a {
+    text-decoration: none;
+}
+
+#menu .tile .front {
+    background-color: black;
+    color: white;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center center;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    
+}
+
+#menu .tile .back {
+    background-color: #222;
+    color: white;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+    font-weight: bold;
+    font-size: 28px;
+    
+}
+
+#menu .tile:hover .front {
+    margin-top: -100%;
+}
+
+#menu .tile:hover .front {
+    margin-top: -100%;
+    
+}
+
+#menu .project-tile:hover .front {
+    margin-top: -50%;
+}
+
+#menu .about-tile .front {
+    background-image: url(img/about.jpg);
+}
+
+#menu .project-tile .front {
+    background-image: url(img/project.jpg);
+}
+
+#menu .post-tile .front {
+    background-image: url(img/post.jpg);
+}
+
+#menu .contact-tile .front {
+    background-image: url(img/contac.jpg);
+}
+
+.about-tile {
+    grid-area: about;
+}
+
+.project-tile {
+    grid-area: project;
+}
+
+.post-tile {
+    grid-area: post;
+}
+
+.contact-tile {
+    grid-area: contact;
+}
+
+@media screen and (max-width: 400px) and (min-width: 50px){
+    #menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "about"
+            "project"
+            "post"
+            "contact";
+            }
+    
+    #menu .tile:hover .front {
+                margin-top: 0px;
+            }
+            
+    #menu .project-tile:hover .front {
+                margin-top: 0px;
+            }        
+}
+
+@media screen and (max-width: 800px) and (min-width: 401px){
+    #menu {
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "about project"
+            "post contact";
+    }
+
+    #menu .tile:hover .front {
+        margin-top: 0px;
+    }
+
+    #menu .project-tile:hover .front {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 1090px) and (min-width: 801px){
+    
+    #menu {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        justify-content: center;
+        align-items: center;
+        grid-template-areas: 
+        "about about project project"
+        "about about project project"
+        "about about post contact"
+        "about about post contact";
+    }
+
+    #menu .project-tile:hover .front {
+        margin-top: -50%;
+}
+}
+
+
+#about {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+            ". . . ."
+            ". description titulo ."
+            ". . . .";
+    
+    animation: movedescription 4s;
+}
+
+
+.titulo {
+    grid-area: titulo;
+}
+
+.description{
+    grid-area: description;
+    
+}
+
+.description p {
+    transition-duration: 2s ease;
+    
+}
+
+
+@keyframes movedescription {
+    0% {
+        display: block;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            ". . . ."
+            "description . titulo ."
+            ". . . .";
+        transition-duration: 3s ease;
+    }
+    50% {
+        display: block;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            ". . . ."
+            ". . titulo description"
+            ". . . .";
+    }
+   
+}
+
+#about .titulo img{
+    width: 20rem;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.50);
+    pointer-events: auto;
+    transition: opacity 300ms;
+}
+
+#about .titulo img:hover {
+    opacity: 0.3;
+}
+
+
+
+#about .description {
+    font-size: 2rem;
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+    direction: ltr;
+}
+
+
+#project {
+    object-fit: cover;
+    display: grid; 
+    grid-template-columns: repeat(8, 1fr); 
+    grid-template-rows: repeat(8, 1fr); 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "p2 p2 p3 p3 p4 p4 p7 p7"
+      "p2 p2 p3 p3 p4 p4 p7 p7"
+      "p2 p2 p5 p5 p6 p6 p7 p7"
+      "p2 p2 p5 p5 p6 p6 p7 p7"
+      "p2 p2 p8 p8 p8 p8 p7 p7"
+      "p2 p2 p8 p8 p8 p8 p7 p7"
+      "p9 p9 p9 p9 p9 p9 p9 p9"
+      "p9 p9 p9 p9 p9 p9 p9 p9"; 
+  }
+  .p3 { grid-area: p3;
+        background: url('./img/2.jpg'); }
+  .p4 { grid-area: p4;
+        background: url('./img/3.jpg'); }
+  .p5 { grid-area: p5; 
+        background: url('./img/4.jpg')}
+  .p6 { grid-area: p6;
+        background: url('./img/5.jpg'); }
+  .p2 { grid-area: p2; 
+        background: url('./img/6.jpg');}
+  .p7 { grid-area: p7;
+        background: url('./img/7.jpg') }
+  .p8 { grid-area: p8; 
+        background: url('./img/8.jpg')}
+  .p9 { grid-area: p9; 
+        background: url('./img/9.jpg')}
+
+#project .p {
+    background-position: center;
+    background-size: contain;
+    
+}
+
+ #contact {
+    background-color: rgba(50, 70, 152);
+    display: grid;
+    grid-template: auto 100px / 700px;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+#contact form {
+    padding: 20px;
+    color: white;
+    display: grid;
+    gap: 15px;
+    grid-template: auto /auto;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#contact form input,
+#contact form textarea {
+    padding: 20px 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+
+#contact .social-networks {
+   justify-self: center;
+   padding: 10px 0; 
+}
+
+#contact .social-networks a {
+    color: white;
+}
+
+#contact form input[type = "submit"]{
+    background-color: red;
+    font-weight: bold;
+    font-size: 28px;
+}
+
