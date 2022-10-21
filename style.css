@@ -5,16 +5,10 @@
 
 body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: y mandatory;
 }
 
-.slider {
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  overflow-x: scroll;
-}
-
-section {
+.seccion {
   max-width: 100vw;
   height: 100vh;
   box-sizing: border-box;
@@ -214,57 +208,47 @@ section {
 }
 
 #project {
+  border: 5px solid black;
   object-fit: cover;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  gap: 0px 0px;
-  grid-template-areas: "p2 p2 p3 p3 p4 p4 p7 p7" "p2 p2 p3 p3 p4 p4 p7 p7" "p2 p2 p5 p5 p6 p6 p7 p7" "p2 p2 p5 p5 p6 p6 p7 p7" "p2 p2 p8 p8 p8 p8 p7 p7" "p2 p2 p8 p8 p8 p8 p7 p7" "p9 p9 p9 p9 p9 p9 p9 p9" "p9 p9 p9 p9 p9 p9 p9 p9";
-}
-
-.p3 {
-  grid-area: p3;
-  background: url("./img/2.jpg");
-}
-
-.p4 {
-  grid-area: p4;
-  background: url("./img/3.jpg");
-}
-
-.p5 {
-  grid-area: p5;
-  background: url("./img/4.jpg");
-}
-
-.p6 {
-  grid-area: p6;
-  background: url("./img/5.jpg");
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "p2 p3" "description description";
 }
 
 .p2 {
   grid-area: p2;
-  background: url("./img/6.jpg");
+  background: center fixed url("./img/ca.jpg");
+  animation: animate 6s ease;
 }
 
-.p7 {
-  grid-area: p7;
-  background: url("./img/7.jpg");
+.p3 {
+  grid-area: p3;
+  background: center fixed url("./img/programing.jpg");
+  animation: animate 6s ease;
 }
 
-.p8 {
-  grid-area: p8;
-  background: url("./img/8.jpg");
+.description {
+  grid-area: description;
+  font-size: larger;
+  margin: 20%;
 }
 
-.p9 {
-  grid-area: p9;
-  background: url("./img/9.jpg");
+@keyframes animate {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
-
 #project .p {
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+  object-fit: cover;
 }
 
 #contact {
