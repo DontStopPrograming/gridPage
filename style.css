@@ -154,7 +154,7 @@ body {
   gap: 50px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: ". . . ." ". description titulo ." ". . . .";
+  grid-template-areas: ". . . ." ". description-about titulo ." ". . . .";
   animation: movedescription 4s;
 }
 
@@ -162,11 +162,7 @@ body {
   grid-area: titulo;
 }
 
-.description {
-  grid-area: description;
-}
-
-.description p {
+.description-about p {
   transition-duration: 2s ease;
 }
 
@@ -175,14 +171,14 @@ body {
     display: block;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: ". . . ." "description . titulo ." ". . . .";
+    grid-template-areas: ". . . ." "description-about . titulo ." ". . . .";
     transition-duration: 3s ease;
   }
   50% {
     display: block;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: ". . . ." ". . titulo description" ". . . .";
+    grid-template-areas: ". . . ." ". . titulo description-about" ". . . .";
   }
 }
 #about .titulo img {
@@ -199,7 +195,8 @@ body {
   opacity: 0.3;
 }
 
-#about .description {
+.description-about {
+  grid-area: description-about;
   font-size: 2rem;
   margin: 10px;
   padding: 10px;
@@ -211,6 +208,8 @@ body {
   border: 5px solid black;
   object-fit: cover;
   display: grid;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas: "p2 p3" "description description";
@@ -219,38 +218,55 @@ body {
 .p2 {
   grid-area: p2;
   background: center fixed url("./img/ca.jpg");
-  animation: animate 6s ease;
 }
 
 .p3 {
   grid-area: p3;
   background: center fixed url("./img/programing.jpg");
-  animation: animate 6s ease;
 }
 
-.description {
+.description-project {
+  position: absolute;
+  z-index: 1;
   grid-area: description;
   font-size: larger;
-  margin: 20%;
+  animation: animate-description-project 6s;
+  opacity: 0%;
 }
 
-@keyframes animate {
+@keyframes animate-description-project {
   0% {
-    opacity: 0%;
+    opacity: 100%;
   }
   50% {
     opacity: 50%;
   }
   100% {
-    opacity: 100%;
+    opacity: 0%;
   }
 }
 #project .p {
   background-position: center;
   background-size: cover;
   object-fit: cover;
+  height: 99vh;
+  animation: animate-p-project 6s ease;
 }
 
+@keyframes animate-p-project {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  70% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
 #contact {
   background-color: rgb(50, 70, 152);
   display: grid;
