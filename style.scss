@@ -182,7 +182,8 @@ body {
 
 
 #about {
-    
+    opacity: 0;
+    transition: all 4s;
     display: grid;
     gap: 50px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -312,6 +313,7 @@ body {
     object-fit: cover;
     height: 99vh;
     animation: animate-p-project 6s ease;
+    
 }
 
 @keyframes animate-p-project {
@@ -331,15 +333,22 @@ body {
     }
 }
 
+#post {
+    opacity: 0.8;
+    -moz-opacity: 0.8;
+    filter: alpha(opacity=80);
+    -khtml-opacity: 0.8;
+}
 
 
 #contact {
-    background-color: rgba(50, 70, 152);
     display: grid;
     grid-template: auto 100px / 700px;
     justify-content: center;
     align-content: center;
     box-sizing: border-box;
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url(./img/fondocode.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
 
 #contact form {
@@ -360,6 +369,10 @@ body {
     border-radius: 5px;
     border: none;
     width: 100%;
+    color: black;
+    font-family: monospace;
+    font-weight: bold;
+    
 }
 
 #contact .social-networks {
@@ -372,8 +385,28 @@ body {
 }
 
 #contact form input[type = "submit"]{
-    background-color: red;
+    background-color: white;
     font-weight: bold;
     font-size: 28px;
+    
 }
 
+input:hover {
+    box-shadow: 0 0 10px 0 #ea00f2 inset,
+                0 0 10px 4px #ea00f2;
+}
+
+textarea:hover {
+    box-shadow: 0 0 10px 0 #3498db inset,
+                0 0 10px 4px #3498db;
+}
+
+.btn {
+    background: #222;
+}
+
+.btn:hover {
+    box-shadow: 0 0 10px 0 #dceb08 inset,
+                0 0 10px 4px #dceb08;
+    background-position: 0;                    
+}
