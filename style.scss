@@ -183,7 +183,7 @@ body {
 
 #about {
     opacity: 0;
-    transition: all 4s;
+    transition: all 7s;
     display: grid;
     gap: 50px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -195,7 +195,6 @@ body {
     
     animation: movedescription 4s;
 }
-
 
 .titulo {
     grid-area: titulo;
@@ -210,7 +209,10 @@ body {
 
 @keyframes movedescription {
     0% {
-        display: block;
+        opacity: 0;
+    }
+    50% {
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: 
@@ -219,16 +221,15 @@ body {
             ". . . .";
         transition-duration: 3s ease;
     }
-    50% {
-        display: block;
+   100% {
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: 
-            ". . . ."
-            ". . titulo description-about"
-            ". . . .";
-    }
-   
+        ". . . ."
+        ". . titulo description-about"
+        ". . . .";
+   }
 }
 
 #about .titulo img{
@@ -272,14 +273,23 @@ body {
   }
 
 .p2 {
+    
     grid-area: p2;
     background: center fixed url('./img/ca.jpg');
     
 }
 
+.p2:hover {
+    width: 10px;
+    height: 10px;
+    display: block;    
+    margin: 6em auto;
+
+}
+
 .p3 {
     grid-area: p3;
-    background:center fixed url('./img/programing.jpg');
+    background:center fixed url('./img/ca.jpg');
     
 }
 
@@ -290,6 +300,7 @@ body {
     font-size: larger;
     animation: animate-description-project 6s;
     opacity: 0%;
+  
 }
 
 @keyframes animate-description-project {
@@ -385,10 +396,8 @@ body {
 }
 
 #contact form input[type = "submit"]{
-    background-color: white;
     font-weight: bold;
     font-size: 28px;
-    
 }
 
 input:hover {
@@ -397,16 +406,16 @@ input:hover {
 }
 
 textarea:hover {
-    box-shadow: 0 0 10px 0 #3498db inset,
-                0 0 10px 4px #3498db;
+    box-shadow: 0 0 10px 0 #ea00f2 inset,
+                0 0 10px 4px #ea00f2;
 }
 
 .btn {
-    background: #222;
+    background: linear-gradient(rgb(132, 136, 241), rgb(255, 255, 255));
+      
 }
 
 .btn:hover {
-    box-shadow: 0 0 10px 0 #dceb08 inset,
-                0 0 10px 4px #dceb08;
-    background-position: 0;                    
+    box-shadow: 0 0 10px 0 #ea00f2 inset,
+                0 0 10px 4px#ea00f2
 }
