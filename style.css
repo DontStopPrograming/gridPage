@@ -226,10 +226,11 @@ body {
 }
 
 .p2:hover {
-  width: 10px;
-  height: 10px;
-  display: block;
-  margin: 6em auto;
+  position: absolute;
+  z-index: 1;
+  background: linear-gradient(black, white);
+  opacity: 0.5;
+  width: 98.8vw;
 }
 
 .p3 {
@@ -240,10 +241,17 @@ body {
 .description-project {
   position: absolute;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 250px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   grid-area: description;
   font-size: larger;
   animation: animate-description-project 6s;
   opacity: 0%;
+  font-size: large;
 }
 
 @keyframes animate-description-project {
