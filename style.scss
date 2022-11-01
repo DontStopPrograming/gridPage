@@ -182,6 +182,8 @@ body {
 
 
 #about {
+    color: #fff;
+    background: linear-gradient(black,red);
     opacity: 0;
     transition: all 7s;
     display: grid;
@@ -278,15 +280,33 @@ body {
     
 }
 
-.p2:hover {
-    position: absolute;
-    z-index: 1;
-    background: linear-gradient(black,white);
-    opacity: 0.5;
-    width: 98.8vw;
+// .p2:hover {
+    
+//     background: linear-gradient(black,white);
+//     opacity: 0.5;
+//     width: 98.8vw;
+    
+//     border-radius: 16px;
+//     overflow: hidden;
+    
+//     transition: all 0.4s ease-in-out;
+        
+// }
+
+.muestra h1 {
+    font-family: "Figtree", sans-serif;
+    font-size: 200px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    opacity: 100%;
+    transform: translate(1000px, 30%);
+    
     
     
 }
+
+
 
 .p3 {
     grid-area: p3;
@@ -302,7 +322,7 @@ body {
     align-items: center;
     padding: 20px;
     margin: 250px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Figtree", sans-serif;
     grid-area: description;
     font-size: larger;
     animation: animate-description-project 6s;
