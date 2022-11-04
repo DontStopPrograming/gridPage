@@ -38,4 +38,6 @@ let ti = document.querySelector('.titulo')
 
 let postagua = document.querySelection('')
 
-     
+
+let fmira = document.querySelector('.mira')
+
