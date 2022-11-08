@@ -18,26 +18,50 @@ function mostrarAbout(){
           
         } 
             
-let ab = document.querySelector('.card')
-    function efecto(valor){
-        let xPos = (valor.pageX - window.innerWidth / 2 ) /25
-        let yPos = (window.innerHeight / 2- valor.pageY) /25
-            ab.style.transform = `rotateY(${xPos}deg) rotateX(${yPos}deg)`
-        }
+//  let ab = document.querySelector('.title3')
+//      function efecto(valor){
+//          let xPos = (valor.pageX - window.innerWidth / 2 ) /25
+//          let yPos = (window.innerHeight / 2- valor.pageY) /25
+//              ab.style.transform = `rotateY(${xPos}deg) rotateX(${yPos}deg)`
+//          }
 
-let ti = document.querySelector('.titulo')
-    function efectoSalir(valor){
-        ti.style.transition = 'tranform 0.5s ease'
-        ti.style.transform = 'rotateY(0deg)rotateX(0deg)'
-    }
+//  let ti = document.querySelector('.introtheme3')
+//      function efectoSalir(valor){
+//          ti.style.transition = 'tranform 0.5s ease'
+//          ti.style.transform = 'rotateY(0deg)rotateX(0deg)'
+//      }
 
     window.addEventListener('scroll', mostrarAbout)
 
-    ab.addEventListener('mouseleave',efectoSalir)
-    ab.addEventListener('mousemove', efecto)
+    //  ab.addEventListener('mouseleave',efectoSalir)
+    //  ab.addEventListener('mousemove', efecto)
 
-let postagua = document.querySelection('')
+let fmira = document.querySelector('mira')
+let fmuestra = document.querySelector('efmuestra')
+let fptema = document.querySelector('efptema')
 
+const chargeImg = (income) => {
+    console.log(income)
+    income.forEach((incom) => {
+        if(incom.isIntersecting){
+            incom.target.classList.add('efOne')
+            incom.target.classList.add('fmuestra')
+            incom.target.classList.add('fptema')
+            
+        } else {
+            incom.target.classList.remove('efOne')
+        } 
+        
+    })
+}
 
-let fmira = document.querySelector('.mira')
+const observador = new IntersectionObserver(chargeImg, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 1.0
+})
+
+observador.observe(fmira)
+observador.observe(fmuestra)
+observador.observe(fptema)
 

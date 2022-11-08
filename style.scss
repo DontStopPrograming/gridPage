@@ -1,6 +1,6 @@
 *{
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
 }
 
@@ -38,7 +38,8 @@ section{
 }
 
 .dustTwo:hover {
-    transform: scale(2, 0.5);
+    grid-area: dustTwo;
+    
 }
 
 .inferno { grid-area: inferno; }
@@ -63,27 +64,33 @@ section{
 
 #menu .mirage {
     background-image: url('cs/mirage.jpg');
+    background-position: center center;
 }
 
 #menu .cache {
     background-image: url('cs/cache.jpg');
+    background-position: center center;
 
 }
 
 #menu .cobble {
     background-image: url('cs/cobble.jpg');
+    background-position: center center;
 }
 
 #menu .overpass {
     background-image: url('cs/overpass.jpg');
+    background-position: center center;
 }
 
 #menu .train {
     background-image: url('cs/train.jpg');
+    background-position: center center;
 }
 
 #menu .nuke {
     background-image: url('cs/nuke.jpg');
+    background-position: center center;
 }
 
 
@@ -219,14 +226,14 @@ section{
     background: url('./cs/fondosniper.jpg');
     opacity: 0;
     transition: all 3s;
-    display: grid;
-    gap: 50px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-            ". . . ."
-            ". description-about titulo ."
-            ". . . .";
+    // display: grid;
+    // gap: 50px;
+    // grid-template-columns: 1fr 1fr 1fr 1fr;
+    // grid-template-rows: 1fr 1fr 1fr;
+    // grid-template-areas: 
+    //         ". . . ."
+    //         ". description-about titulo ."
+    //         ". . . .";
     
     animation: movedescription 1s;
 }
@@ -300,7 +307,7 @@ section{
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: 
         "agua agua"
-        "description description";
+        "description-project description-project";
   }
 
 .agua-uno {
@@ -315,52 +322,59 @@ section{
     
 }
 
-
-
-.mira {
+#project .mira {
     position: absolute;
     z-index: 1;
     left: 800px;
     animation: delmira 7s;
+    opacity: 0;
+}
+
+.mira.efOne {
+    opacity: 1;
+    position: sticky;
     
-    
+}
+
+.mira.efTwo {
+    transform: scale(0.9) translate(-100%, -100%);
 }
 
  @keyframes delmira {
      0% {
          opacity: 0;
      }
-     10% {
+     10% { 
          transform: translate(-500px, 50%);
          opacity: 80%;
      }
      20% {
          transform: translate(500px,50%);
-         opacity: 100%;
+         opacity: 1;
      }
      30% {
         transform: translate(800px, 100%);
+        opacity: 1;
      }
      40% {
         transform: translate(500px, 50%);
+        opacity: 1;
      }
      50% {
         transform: translate(120px, 50%);
-     }
-     60% {
-        transform: matrix(10, 2, 3, 4, 5, 6);
+        opacity: 1;
      }
      70% {
-        transform: matrix(10, 2, 3, 40, 5, 6);
-     }
-     80% {
-        transform: rotate(0.9turn);
+        transform: translate(120px, 100%);
+        opacity: 1;
      }
      90% {
-        transform: rotate(0.9turn);
+        transform: rotate(9.9turn);
+        opacity: 1;
      }
      100% {
-        transform: scale(0.9 translate(-100%,-100%));
+        transform: scale(0.9 translate(-10%,-10%));
+        opacity: 1;
      }
      
  }
@@ -378,20 +392,29 @@ section{
         
 // }
 
-.muestra h1 {
+.muestra h1{
+    text-align: left;
     font-family: "Figtree", sans-serif;
-    font-size: 200px;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    opacity: 100%;
+    font-size: 100px;
+    padding: 10%;
+    opacity: 1;
     transform-style: flat;
-    left: 0;
-    transition: left 5s cubic-bezier(0, 0, 1, 1);
-  
 }
 
+.muestra h1.efmuestra {
+    opacity: 1;
+}
 
+.ptema h2{
+    font-family: "Figtree", sans-serif;
+    padding: 10%;
+    opacity: 1;
+    text-align: left;
+}
+
+.ptema h2.efptema {
+    opacity: 1;
+}
 
 
 .description-project {
@@ -408,6 +431,171 @@ section{
     animation: animate-description-project 6s;
     opacity: 0%;
     font-size: large;
+}
+
+
+.introtheme1 {
+    border: 2px solid rgb(198, 8, 8);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        'title1 img1'
+        'title1 img1';
+}
+
+    .img1 {
+        grid-area: img1;
+        width: 100%;
+        
+    }
+
+    .title1 {
+        grid-area: title1;
+    }
+   
+.introtheme1 h1 {
+    font-family: "Figtree", sans-serif;
+    font-size: 5rem;
+    margin: 3rem;
+    
+}
+
+
+.introtheme2 {
+    border: 2px solid rgb(255, 255, 0);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        'img2 title2'
+        'img2 title2';
+}
+
+.img2 {
+    grid-area: img2;
+    width: 100%;
+}
+
+.title2 {
+    grid-area: title2;
+    
+}
+
+.introtheme2 h1 {
+    font-family: "Figtree", sans-serif;
+    font-size: 5rem;
+    margin: 4rem;
+    
+}
+
+.introtheme3 {
+    display: relative;
+    width: 98vw;
+    height: 180vh;;
+    position: center center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        '. . img5 .'
+        '. img4 img5 .'
+        'img3 img4 . .'
+        'img3 . . .';    
+    }
+
+    .img3 {
+        grid-area: img3;
+        width: 100%;
+        box-shadow: 4px 4px 20px purple;
+    }
+    
+    .img4 {
+        grid-area: img4;
+        width: 100%;
+        box-shadow: 4px 4px 20px blue;
+    }
+    
+    .img5 {
+        grid-area: img5;
+        width: 100%;
+        box-shadow: 4px 4px 20px red;
+    }
+
+   
+.introtheme3 img {
+    border-radius: 20px;
+    display: absolute;
+    opacity: 60%;
+    padding: 2px;
+    margin: 10px;
+}
+
+.introtheme3 img:hover {
+    opacity: 100%;
+}
+
+.introtheme4 {
+    display: relative;
+    width: 99vw;
+    height: 100vh;
+    border: 2px solid green;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.introtheme4 h1 {
+    font-family: "Figtree", sans-serif;
+    font-size: 4rem;
+    color: rgb(0, 0, 0);
+    padding: 4rem;
+    display: absolute;
+}
+
+.title3 {
+    animation: t3 6s;
+    transition: 6s ease;
+}
+
+@keyframes t3 {
+    10% {
+        transform: translate(50%, 50%);
+    }
+    80% {
+        transform: translate(100%, -50%);
+        opacity: 0;
+    }
+}
+
+.title4 {
+    animation: t4 5s;
+    transition: 5s ease-in-out;
+}
+
+@keyframes t4 {
+    10% {
+        transform: translate(120px, 80%);
+    }
+    80% {
+        transform: translate(10%, 10%);
+        opacity: 0;
+    }
+}
+
+.title5 {
+    animation: t5 2s;
+}
+
+@keyframes t5 {
+    10% {
+        transform: translate(100px, 100%);
+    }
+    80% {
+        transform: translate(100%, 50%);
+        opacity: 0;
+    }
 }
 
 
