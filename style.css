@@ -118,54 +118,16 @@ section {
   grid-area: contact;
 }
 
-@media screen and (max-width: 400px) and (min-width: 50px) {
-  #menu {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "about" "project" "post" "contact";
-  }
-  #menu .tile:hover .front {
-    margin-top: 0px;
-  }
-  #menu .project-tile:hover .front {
-    margin-top: 0px;
-  }
-}
-@media screen and (max-width: 800px) and (min-width: 401px) {
-  #menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "about project" "post contact";
-  }
-  #menu .tile:hover .front {
-    margin-top: 0px;
-  }
-  #menu .project-tile:hover .front {
-    margin-top: 0px;
-  }
-}
-@media screen and (max-width: 1090px) and (min-width: 801px) {
-  #menu {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    justify-content: center;
-    align-items: center;
-    grid-template-areas: "about about project project" "about about project project" "about about post contact" "about about post contact";
-  }
-  #menu .project-tile:hover .front {
-    margin-top: -50%;
-  }
-}
 #about {
   color: #fff;
   background: url("./cs/fondosniper.jpg");
   opacity: 0;
   transition: all 3s;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: ". . . ." ". description-about titulo ." ". . . .";
   animation: movedescription 1s;
 }
 
@@ -173,28 +135,6 @@ section {
   grid-area: titulo;
 }
 
-.description-about p {
-  transition-duration: 2s ease;
-}
-
-@keyframes movedescription {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: ". . . ." "description-about . titulo ." ". . . .";
-    transition-duration: 3s ease;
-  }
-  100% {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: ". . . ." ". . titulo description-about" ". . . .";
-  }
-}
 .description-about {
   grid-area: description-about;
   font-size: 2rem;
@@ -468,6 +408,20 @@ section {
     opacity: 0;
   }
 }
+#dustTwo {
+  font-family: "Ubuntu", sans-serif;
+  border: 2px solid purple;
+}
+
+.front {
+  float: left;
+  border-top: 100px solid transparent;
+  border-right: 500px solid blue;
+  border-bottom: 100px solid transparent;
+  background-image: url("cs/dust2.jpg");
+  background-image: url("cs/dust2.jpg");
+}
+
 @keyframes animate-description-project {
   0% {
     opacity: 100%;
