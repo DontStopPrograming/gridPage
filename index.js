@@ -36,7 +36,7 @@ function mostrarAbout(){
     //  ab.addEventListener('mouseleave',efectoSalir)
     //  ab.addEventListener('mousemove', efecto)
 
-let fmira = document.querySelector('mira')
+let fmap = document.querySelector('map')
 let fmuestra = document.querySelector('efmuestra')
 let fptema = document.querySelector('efptema')
 
@@ -61,7 +61,14 @@ const observador = new IntersectionObserver(chargeImg, {
     threshold: 1.0
 })
 
-observador.observe(fmira)
+observador.observe(fmap)
 observador.observe(fmuestra)
 observador.observe(fptema)
 
+let imagen3 = document.querySelector('img3')
+
+function click(){
+    imagen3.style.width = '100px'
+}
+
+document.addEventListener('onClick', click)

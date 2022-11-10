@@ -136,7 +136,6 @@ section {
 }
 
 .description-about {
-  grid-area: description-about;
   font-size: 2rem;
   margin: 10px;
   padding: 10px;
@@ -144,83 +143,6 @@ section {
   direction: ltr;
 }
 
-#project {
-  position: relative;
-  height: 100vh;
-  border: 5px solid black;
-  object-fit: cover;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: "agua agua" "description-project description-project";
-}
-
-.agua-uno {
-  grid-area: agua;
-  background: center fixed url("./img/agua.jpg");
-}
-
-.agua-dos {
-  grid-area: agua;
-  background: center fixed url("./img/agua.jpg");
-}
-
-#project .mira {
-  position: absolute;
-  z-index: 1;
-  left: 800px;
-  animation: delmira 7s;
-  opacity: 0;
-}
-
-.mira.efOne {
-  opacity: 1;
-  position: sticky;
-}
-
-.mira.efTwo {
-  transform: scale(0.9) translate(-100%, -100%);
-}
-
-@keyframes delmira {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    transform: translate(-500px, 50%);
-    opacity: 80%;
-  }
-  20% {
-    transform: translate(500px, 50%);
-    opacity: 1;
-  }
-  30% {
-    transform: translate(800px, 100%);
-    opacity: 1;
-  }
-  40% {
-    transform: translate(500px, 50%);
-    opacity: 1;
-  }
-  50% {
-    transform: translate(120px, 50%);
-    opacity: 1;
-  }
-  70% {
-    transform: translate(120px, 100%);
-    opacity: 1;
-  }
-  90% {
-    transform: rotate(9.9turn);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0.9 translate(-10%, -10%));
-    opacity: 1;
-  }
-}
 .muestra h1 {
   text-align: left;
   font-family: "Figtree", sans-serif;
@@ -245,6 +167,14 @@ section {
   opacity: 1;
 }
 
+#project {
+  width: 100vw;
+  height: 100vh;
+  border: 5px solid black;
+  object-fit: cover;
+  animation: animate-description-project 7s;
+}
+
 .description-project {
   position: absolute;
   z-index: 1;
@@ -254,13 +184,71 @@ section {
   padding: 20px;
   margin: 250px;
   font-family: "Figtree", sans-serif;
-  grid-area: description;
-  font-size: larger;
-  animation: animate-description-project 6s;
+  font-size: 2rem;
+  animation: descriptiona 9s;
   opacity: 0%;
-  font-size: large;
 }
 
+@keyframes descriptiona {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animate-description-project {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  30% {
+    background-image: url("cs/dust2.jpg");
+    background-position: center;
+  }
+  40% {
+    background-image: url("cs/inferno.jpg");
+    background-position: center;
+  }
+  50% {
+    background-image: url("cs/mirage.jpg");
+    background-position: center;
+  }
+  60% {
+    background-image: url("cs/cache.jpg");
+    background-position: center;
+  }
+  70% {
+    background-image: url("cs/cobble.jpg");
+    background-position: center;
+  }
+  80% {
+    background-image: url("cs/overpass.jpg");
+    background-position: center;
+  }
+  90% {
+    background-image: url("cs/train.jpg");
+    background-position: center;
+  }
+  100% {
+    background-image: url("cs/nuke.jpg");
+    background-position: center;
+  }
+}
 .introtheme1 {
   border: 2px solid rgb(198, 8, 8);
   display: grid;
@@ -322,6 +310,11 @@ section {
   grid-area: img3;
   width: 100%;
   box-shadow: 4px 4px 20px purple;
+}
+
+.img3:focus {
+  width: 200px;
+  height: 400px;
 }
 
 .img4 {
@@ -406,53 +399,6 @@ section {
   80% {
     transform: translate(100%, 50%);
     opacity: 0;
-  }
-}
-#dustTwo {
-  font-family: "Ubuntu", sans-serif;
-  border: 2px solid purple;
-}
-
-.front {
-  float: left;
-  border-top: 100px solid transparent;
-  border-right: 500px solid blue;
-  border-bottom: 100px solid transparent;
-  background-image: url("cs/dust2.jpg");
-  background-image: url("cs/dust2.jpg");
-}
-
-@keyframes animate-description-project {
-  0% {
-    opacity: 100%;
-  }
-  50% {
-    opacity: 50%;
-  }
-  100% {
-    opacity: 0%;
-  }
-}
-#project .p {
-  background-position: center;
-  background-size: cover;
-  object-fit: cover;
-  height: 99vh;
-  animation: animate-p-project 6s ease;
-}
-
-@keyframes animate-p-project {
-  0% {
-    opacity: 0%;
-  }
-  50% {
-    opacity: 0%;
-  }
-  70% {
-    opacity: 50%;
-  }
-  100% {
-    opacity: 100%;
   }
 }
 #post {
