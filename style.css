@@ -127,15 +127,15 @@ section {
   gap: 50px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: ". . . ." ". description-about titulo ." ". . . .";
-  animation: movedescription 1s;
+  grid-template-areas: ". . . ." ". p4ription-about titulo ." ". . . .";
+  animation: movep4ription 1s;
 }
 
 .titulo {
   grid-area: titulo;
 }
 
-.description-about {
+.p4ription-about {
   font-size: 2rem;
   margin: 10px;
   padding: 10px;
@@ -172,10 +172,16 @@ section {
   height: 100vh;
   border: 5px solid black;
   object-fit: cover;
-  animation: animate-description-project 7s;
+  animation: animate-p4ription-project 4s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  z-index: -1;
 }
 
-.description-project {
+.p4ription-project {
   position: absolute;
   z-index: 1;
   display: flex;
@@ -185,15 +191,63 @@ section {
   margin: 250px;
   font-family: "Figtree", sans-serif;
   font-size: 2rem;
-  animation: descriptiona 9s;
+  animation: p4riptiona 4s;
+  transition: 3 linear;
   opacity: 0%;
 }
 
-@keyframes descriptiona {
+@keyframes p4riptiona {
   0% {
     opacity: 0;
   }
   80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animate-p4ription-project {
+  0% {
+    opacity: 0;
+    background: #fff;
+  }
+  10% {
+    opacity: 0;
+    background: #fff;
+  }
+  90% {
+    background: #fff;
+    background-position: center;
+  }
+  100% {
+    background: #fff;
+    background-position: center;
+  }
+}
+.p1 {
+  border: 1px solid red;
+  z-index: -1;
+  position: absolute;
+  width: 700px;
+  height: 500px;
+  top: 12%;
+  left: 10%;
+  animation: p11 7s;
+  transition: 6s ease-in-out;
+}
+
+@keyframes p11 {
+  10% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
     opacity: 0;
   }
   90% {
@@ -203,50 +257,149 @@ section {
     opacity: 1;
   }
 }
-@keyframes animate-description-project {
+.p2 img {
+  z-index: 1;
+  width: 600px;
+  height: 600px;
+  top: 25%;
+  right: 50%;
+  position: absolute;
+  object-fit: cover;
+  box-shadow: 0.5px 0.5px 30px 10px white;
+  animation: p22 7s;
+  transition: 5s linear;
+}
+
+@keyframes p22 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+    background: #fff;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  }
+  25% {
+    opacity: 0;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    opacity: 0;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  }
+  80% {
+    opacity: 40%;
+  }
+  90% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 70%;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  }
+}
+.p4 {
+  background: linear-gradient(black, rgb(55, 19, 55));
+  position: absolute;
+  width: 900px;
+  height: 700px;
+  top: 20%;
+  border: 0.5px solid black;
+  box-shadow: 1px 1px 1px 1px rgb(45, 34, 72);
+  animation: p44 7s;
+  border: 2px solid purple;
+  z-index: 1;
+}
+
+.p4 h1 {
+  font-family: "Figtree", sans-serif;
+  font-size: 5rem;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 70%;
+  z-index: 1;
+  font-weight: 10rem;
+  text-align: justify;
+  animation: p4h11 7s;
+  transition: 4s linear;
+}
+
+@keyframes p4h1 {
   0% {
     opacity: 0;
   }
   10% {
     opacity: 0;
   }
-  20% {
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 50%;
+    transform: scale(0.1) translate(-100%, -100%);
+  }
+  100% {
+    opacity: 70%;
+    transform: scale(0.2) translate(-100%, -100%);
+  }
+}
+@keyframes p44 {
+  0% {
+    opacity: 0;
+  }
+  10% {
     opacity: 0;
   }
   25% {
     opacity: 0;
   }
-  30% {
-    background-image: url("cs/dust2.jpg");
-    background-position: center;
-  }
-  40% {
-    background-image: url("cs/inferno.jpg");
-    background-position: center;
-  }
   50% {
-    background-image: url("cs/mirage.jpg");
-    background-position: center;
-  }
-  60% {
-    background-image: url("cs/cache.jpg");
-    background-position: center;
-  }
-  70% {
-    background-image: url("cs/cobble.jpg");
-    background-position: center;
+    opacity: 0;
   }
   80% {
-    background-image: url("cs/overpass.jpg");
-    background-position: center;
+    opacity: 0;
   }
   90% {
-    background-image: url("cs/train.jpg");
-    background-position: center;
+    opacity: 50%;
   }
   100% {
-    background-image: url("cs/nuke.jpg");
-    background-position: center;
+    opacity: 70%;
+  }
+}
+.p3 {
+  z-index: -2;
+  position: absolute;
+  width: 700px;
+  height: 550px;
+  top: 40%;
+  right: 5%;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  animation: p33 7s;
+  transition: 6s ease-in;
+}
+
+@keyframes p33 {
+  10% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .introtheme1 {

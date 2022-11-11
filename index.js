@@ -8,7 +8,7 @@ function mostrarAbout(){
         let alturaPixel = abouts[i].offsetTop
     if(alturaPixel - 300 < scrollLear){
         abouts[i].style.opacity = 1
-        abouts[i].classList.add('movedescription')
+        abouts[i].classList.add('movep4ription')
         } else if(alturaPixel - 500 < scrollLear) {
             abouts[i].style.opacity = 0
         } else if(alturaPixel < scrollLear) {
@@ -65,10 +65,3 @@ observador.observe(fmap)
 observador.observe(fmuestra)
 observador.observe(fptema)
 
-let imagen3 = document.querySelector('img3')
-
-function click(){
-    imagen3.style.width = '100px'
-}
-
-document.addEventListener('onClick', click)
