@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+textarea {
+  resize: none;
+}
+
 body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   scroll-snap-type: y mandatory;

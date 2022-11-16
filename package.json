@@ -1,0 +1,24 @@
+{
+  "name": "grid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DontStopPrograming/gridPage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DontStopPrograming/gridPage/issues"
+  },
+  "homepage": "https://github.com/DontStopPrograming/gridPage#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

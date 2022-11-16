@@ -146,29 +146,30 @@
         
     </section>
 
-    
-
-
     <section id = "contact" class = "seccion scontact">
-        <form action="#">
+        <form action = "https://formsubmit.co/lylylatez@gmail.com" method = "POST">
             <h2> CONTACT</h2>
-            <h1> For those programing looking to challenge their previous 
-                best and cross the finish line faster than ever before. 
-                This option is built around improving your personality and professiona
-            </h1>
+            
             <label for="name"> NAME</label>
-            <input type="text">
+            <input type="text" name = "name" required>
+
+            <label for="email"> EMAIL</label>
+            <input type="email" name = "email" required>
 
             <label for="name"> SUBJECT</label>
-            <input type="text">
+            <input type="text" name = "Conocer mas" required>
 
             <label for="name"> </label>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea name="textarea" id="" cols="30" rows="10" required></textarea>
+
+            <input type="hidden" name = "_next" value = "http://localhost:5501/">
+            <input type="hidden" name = "_captcha" value = "false">
 
             <input class = "btn" type="submit" value = "Enviar">
         </form>
     </section>
     </div>
     <script src = "index.js"> </script>
+    <script src = "server.js"> </script>
 </body>
 </html>
