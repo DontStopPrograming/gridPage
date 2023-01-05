@@ -2,6 +2,8 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    max-width: 99vw;
+    max-height: 99vh;
 }
 
 textarea {
@@ -715,54 +717,107 @@ section{
 }
 
 .introtheme3 {
-    display: relative;
+    position: relative;
     width: 98vw;
     height: 180vh;;
     position: center center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-        '. . img5 .'
-        '. img4 img5 .'
-        'img3 img4 . .'
-        'img3 . . .';    
+        '. . . . . .img5 desimg5 desimg5p'
+        '. . . img4 desimg4 desimg4p img5 desimg5 desimg5p'
+        'img3 desimg3 desimg3p img4 desimg4 desimg4p  . . .'
+        'img3 desimg3 desimg3p . . . . . .';    
     }
 
     .img3 {
         grid-area: img3;
-        width: 100%;
         box-shadow: 4px 4px 20px purple;
     }
 
-    .img3:focus {
-        width: 200px;
-        height: 400px;
+    .desimg3 {
+        position: absolute;
+        grid-area: desimg3;
+        border: 2px solid rgb(221, 90, 221);
+        border-radius: 5px;
+        left: -205px;
+        height: 520px;
+        width: 500px;
     }
+
+    .desimg3 p {
+        position: absolute;
+        grid-area: desimg3p;
+        left: 42%;
+        font-size: 38px;
+    }
+
+    .desimg4 {
+        position: absolute;
+        grid-area: desimg4;
+        border: 2px solid blue;
+        border-radius: 5px;
+        left: -205px;
+        height: 520px;
+        width: 500px;
+    }
+
+    .desimg4 p {
+        position: absolute;
+        grid-area: desimg4p;
+        left: 42%;
+        font-size: 38px;
+        
+    }
+
+    .desimg5 {
+        position: absolute;
+        grid-area: desimg5;
+        border: 2px solid red;
+        border-radius: 5px;
+        left: -205px;
+        height: 520px;
+        width: 500px;
+    }
+
+    .desimg5 p {
+        position: absolute;
+        grid-area: desimg5p;
+        left: 42%;
+        font-size: 38px;
+        
+    }
+    
 
     .img4 {
         grid-area: img4;
-        width: 100%;
         box-shadow: 4px 4px 20px blue;
     }
     
     .img5 {
         grid-area: img5;
-        width: 100%;
         box-shadow: 4px 4px 20px red;
     }
 
    
-.introtheme3 img {
-    border-radius: 20px;
-    display: absolute;
-    opacity: 60%;
-    padding: 2px;
-    margin: 10px;
-}
+    .introtheme3 img {
+        border-radius: 20px;
+        margin-left: -70%;
+        display: absolute;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        opacity: 60%;
+        padding: 2px;
+        margin: 10px;
+      }
 
 .introtheme3 img:hover {
     opacity: 100%;
+    width: 200px;
+    height: 500px;
+    
 }
 
 .introtheme4 {

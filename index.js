@@ -36,32 +36,20 @@ function mostrarAbout(){
     //  ab.addEventListener('mouseleave',efectoSalir)
     //  ab.addEventListener('mousemove', efecto)
 
-let fmap = document.querySelector('map')
-let fmuestra = document.querySelector('efmuestra')
-let fptema = document.querySelector('efptema')
+let intro = document.getElementById('introtheme4')
 
-const chargeImg = (income) => {
-    console.log(income)
-    income.forEach((incom) => {
-        if(incom.isIntersecting){
-            incom.target.classList.add('efOne')
-            incom.target.classList.add('fmuestra')
-            incom.target.classList.add('fptema')
-            
-        } else {
-            incom.target.classList.remove('efOne')
-        } 
-        
+const chargeSection = (ing, obs) => {
+    ing.forEach((ing) => {
+        if(ing.isIntersecting){
+            console.log('Muestra')
+        }
     })
 }
 
-const observador = new IntersectionObserver(chargeImg, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 1.0
+const observation = new IntersectionObserver(chargeSection,{
+     root: null,
+     rootMargin: '0px',
+     threshold: 0
 })
 
-observador.observe(fmap)
-observador.observe(fmuestra)
-observador.observe(fptema)
-
+observation.observe(intro)
